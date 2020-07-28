@@ -1,0 +1,87 @@
+
+
+; comment
+
+COLOUR 2
+BORDER 0
+
+; MENU
+COLOUR 71
+BORDER 0
+;CLS
+
+LET LINE = 5
+LET COLUMN = 10
+COLOUR 4
+MESSAGE 3
+LET LINE = 7
+LET COLUMN = 10
+COLOUR 5
+MESSAGE 4
+LET LINE = 9
+LET COLUMN = 10
+COLOUR 6
+MESSAGE 5
+LET LINE = 11
+LET COLUMN = 10
+COLOUR 3
+MESSAGE 6
+LET LINE = 17
+LET COLUMN = 8
+COLOUR 7
+
+;MESSAGE 7
+let o = 0
+
+
+WAITKEY
+
+IF KEY  9 ; up
+    
+ENDIF
+
+CLS
+
+
+
+LET A = 0
+LET I = 0   ;(no invulnerability when the first play starts)
+LET O = 80  ;(or other value, clones player’s X pixel position)
+LET P = 120 ;(or other value, clones player’s Y pixel position)
+LET LIVES = 3
+
+; vidas
+LET LINE = 20
+LET COLUMN = 1
+MESSAGE 2
+
+COLOUR 6
+LET LINE = 20
+LET COLUMN = 8
+DISPLAY LIVES
+
+; aun no se
+;LET LINE = 20
+;LET COLUMN = 0
+;COLOUR 48
+;MESSAGE 1
+
+; score
+COLOUR 2
+LET LINE = 20
+LET COLUMN = 19
+MESSAGE 1
+
+COLOUR 6
+LET LINE = 20
+LET COLUMN = 25
+SHOWSCORE
+
+COLOUR 8
+
+
+
+
+
+
+                                                                                                                                               

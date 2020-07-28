@@ -1,0 +1,41 @@
+
+; comment
+IF PARAMA = 0
+    IF CANGOUP
+        SPRITEUP
+    ELSE
+        LET PARAMA = 1
+    ENDIF
+ELSE
+    IF CANGODOWN
+        SPRITEDOWN
+    ELSE
+        LET PARAMA  = 0
+    ENDIF
+ENDIF
+IF A = 0
+    ANIMATE
+ENDIF
+IF COLLISION 0
+    KILL
+    
+    COLOUR 6
+    LET LINE = 20
+    LET COLUMN = 8
+    DISPLAY LIVES
+    COLOUR 2
+    LET LINE = 20
+    LET COLUMN = 1
+    MESSAGE 2
+    
+    COLOUR 6
+    LET LINE = 20
+    LET COLUMN = 25
+    SHOWSCORE
+    COLOUR 2
+    LET LINE = 20
+    LET COLUMN = 19
+    MESSAGE 1
+ENDIF
+
+

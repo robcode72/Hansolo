@@ -1,0 +1,13 @@
+;if o = 1
+;exit
+;endif
+
+; player will appear at the cloned coordinates, which correspond to the X/Y values at the start of play!
+IF TYPE 0
+LET X = O
+LET Y = P
+ENDIF
+
+IF TYPE = 2
+    ADD 1 TO A
+ENDIF

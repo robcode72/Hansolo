@@ -1,0 +1,8 @@
+; comment
+
+IF A = 1
+    LET A = 0
+ELSE
+    ADD 1 TO A
+ENDIF
+

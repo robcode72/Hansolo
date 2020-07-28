@@ -1,0 +1,92 @@
+;
+; Player control
+;
+
+IF I > 0
+    GETRANDOM 7
+    ADD 65 TO RND
+    
+    IF A = 0
+    SUBTRACT 1 FROM I
+ENDIF
+ELSE
+    LET I = 0
+    
+ENDIF
+
+
+
+; SAVE PLAYERERS POSITION
+LET O = X
+LET P = Y
+
+IF Y > 200 
+    IF  X > 100
+        SCREEN 1
+        SCREENRIGHT
+        Y = 8
+        EXIT
+    ENDIF
+ENDIF
+
+IF KEY  2 
+    JUMP
+    BEEP 30
+ENDIF
+
+IF KEY  1
+
+    IF CANGORIGHT
+        LET IMAGE =   4
+        IF A = 0 
+            ANIMATE
+            IF FRAME = 2 
+                BEEP 9
+            ENDIF
+        ENDIF
+        SPRITERIGHT
+    ENDIF
+ENDIF
+
+IF KEY  0
+    IF CANGOLEFT
+        LET IMAGE =  10
+        IF A = 0
+            ANIMATE
+        ENDIF
+        IF FRAME =2 
+            BEEP 9
+        ENDIF
+        SPRITELEFT
+        
+    ENDIF
+ENDIF
+
+
+IF CANGODOWN
+    FALL
+ENDIF
+
+IF DEADLY
+    SOUND 1
+    KILL
+    COLOUR 6
+    LET LINE = 20
+    LET COLUMN = 8
+    DISPLAY LIVES
+    COLOUR 2
+    LET LINE = 20
+    LET COLUMN = 1
+    MESSAGE 2
+    
+    COLOUR 6
+    LET LINE = 20
+    LET COLUMN = 25
+    SHOWSCORE
+    COLOUR 2
+    LET LINE = 20
+    LET COLUMN = 19
+    MESSAGE 1
+ENDIF
+        
+

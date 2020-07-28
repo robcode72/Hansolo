@@ -1,0 +1,71 @@
+IF PARAMA = 0
+    IF CANGOLEFT
+        SPRITELEFT
+        SUBTRACT 16 FROM Y
+        IF CANGODOWN
+            LET PARAMA = 1
+        ENDIF
+        ADD 16 TO Y
+    ELSE
+        LET PARAMA = 1
+    ENDIF
+ELSE
+    IF CANGORIGHT
+        SPRITERIGHT
+        ADD 16 TO Y
+        IF CANGODOWN
+            LET PARAMA = 0
+        ENDIF
+        SUBTRACT 16 FROM Y
+    ELSE
+        LET PARAMA = 0
+    ENDIF
+ENDIF
+IF PARAMA = 0 ; RIGHT
+    
+    IF A = 0
+        LET IMAGE = 1
+        
+        ANIMATE
+    ENDIF
+ELSE
+    IF A = 0
+        LET IMAGE = 0
+        ANIMBACK
+        ;ANIMATE
+    ENDIF
+    ;ANIMBACK
+ENDIF
+IF COLLISION 0
+    
+    IF I > 0
+        ELSE       ;(if timer has a value greater than 0, do nothing)
+        LET I = 25 ;(or other value, corresponds to some seconds of invulnerability)
+        KILL
+    ENDIF
+ENDIF
+    
+ENDIF
+    
+
+
+
+;
+; Diamond collision
+;
+LET IMAGE = 9
+
+IF COLLISION 0
+    REMOVE
+    SUBTRACT 1 FROM A
+    IF A = 0
+        ;SCREEN = 71
+        NEXTLEVEL
+    ENDIF
+    SCORE 100
+    SOUND 1
+    COLOUR 6
+    LET LINE = 20
+    LET COLUMN = 25
+    SHOWSCORE
+ENDIF
