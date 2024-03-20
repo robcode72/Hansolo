@@ -1,5 +1,5 @@
 # Thunder Storm (Han Solo)
-platform : Spectrum 128KB
+Platform : ZX Spectrum 128KB
 made with AGD
 
 A small game with Han Solo for you spectrum.
