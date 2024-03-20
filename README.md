@@ -1,4 +1,4 @@
-# Thunder (Han Solo)
+# Thunder Storm (Han Solo)
 platform : Spectrum 128KB
 made with AGD
 
